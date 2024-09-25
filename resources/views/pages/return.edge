@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @vite('resources/css/app.css')
+    <title>URL shortener</title>
+</head>
+<body>
+    <h1>Bienvenue chez URL Shorterner, où vos liens sont raccourcis! (Bonus : un QR code avec)</h1>
+<div class="div-section">
+    <section>
+        <label for="oldLink">Votre Lien Raccourcis</label>
+        <p class="url_shortener">Short Url: <a id ="shortUrl"target="_blank"  href="{{ shortUrl }}"rel="noopener noreferrer"> {{ shortUrl }}"</a></p>
+
+        <label for="qrCode">Votre QR Code </label>
+        <div class="qr_codeDiv">
+            <div  id="qrCode"><img src="{{ qrCodeUrl }}" alt="QR Code" /></div>
+        </div>
+           
+
+    </section>
+</div>
+
+</body>
+</html>
