@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @vite('resources/css/app.css')
+    <title>URL shortener</title>
+</head>
+<body>
+    <h1>Bienvenue chez URL Shorterner, où vos liens sont raccourcis! (Bonus : un QR code avec)</h1>
+<div class="div-section">
+    <form action="/return" method="POST" >
+        {{ csrfField() }}
+        <label for="oldLink">Entrez votre lien</label>
+        <input type="text" name="url" id="oldLink"  placeholder=" VOTRE LIEN" required >
+        <div class="buttonContainer">
+            <button type="submit" id="generateBtn">Raccourcir</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
