@@ -47,14 +47,13 @@ header>nav>ul {
   justify-content: space-between;
 }
 
-nav>ul>li>a {
+header>nav>ul>li>a {
   font-family: "Modak", cursive;
   font-size: 20px;
   color: white;
 }
 
 .logo {
-
   font-family: "Modak", cursive;
   font-size: 50px;
   color: white
@@ -134,4 +133,26 @@ input {
 .qr_code {
   width: fit-content;
   height: fit-content;
+}
+
+footer {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer p {
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  font-family: "Modak", cursive;
+}
+
+.footer-links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
 }

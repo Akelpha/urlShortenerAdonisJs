@@ -1,56 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+@layout.app({ title: "SHURL--Un site web, deux atouts : lien raccourci + QR Code." })
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
-  @vite('resources/css/app.css')
-  <title>SHURL--Un site web, deux atouts : lien raccourci + QR Code.</title>
-</head>
-
-<body>
   <header>
     <nav>
-
       <a href="/" class="logo">SHURL</a>
       <ul class="nav-links">
-        <li><a href="/">Accueil</a></li>
-        <li><a href="/about">À propos</a></li>
+        <li>
+          <a href="/">Accueil</a>
+        </li>
+        <li>
+          <a href="/about">À propos</a>
+        </li>
       </ul>
 
     </nav>
   </header>
   <main>
     <div>
-      <h1>Bienvenue chez URL Shorterner, où vos liens sont raccourcis! (Bonus : un QR code avec)</h1>
+      <h1>
+        Bienvenue chez URL Shorterner, où vos liens sont raccourcis! (Bonus : un QR code avec)
+      </h1>
       <div class="div-section">
         <section>
           <label for="oldLink">Votre Lien Raccourcis</label>
-          <p class="url_shortener">Short Url: <a id="shortUrl" target="_blank" href="{{ shortUrl }}"
-              rel="noopener noreferrer"> {{ shortUrl }}"</a></p>
+          <p class="url_shortener">
+            Short Url: <a id="shortUrl" target="_blank" href="{{ shortUrl }}" rel="noopener noreferrer">{{ shortUrl }}"</a>
+          </p>
 
           <label for="qrCode">Votre QR Code </label>
           <div class="qr_codeDiv">
-            <div id="qrCode"><img src="{{ qrCodeUrl }}" alt="QR Code" /></div>
+            <div id="qrCode">
+              <img src="{{ qrCodeUrl }}" alt="QR Code" />
+            </div>
           </div>
-
 
         </section>
       </div>
 
-  </main>
-  <footer>
-    <p>&copy;2025 SHURL. Tous droits réservés.</p>
-    <div>
-      <ul class="footer-links">
-        <li><a href="/">GitHub</a></li>
-        <li><a href="/about">LinkedIn</a></li>
-        <li><a href="/about">Mon Portfolio</a></li>
-      </ul>
-    </div>
+    </main>
+    @component('components/footer')
+    @endcomponent
 
-  </footer>
-</body>
 
-</html>
+  @end
