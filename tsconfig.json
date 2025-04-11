@@ -4,8 +4,10 @@
     "outDir": "build",
     "rootDir": ".",
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "moduleResolution": "node16"
   },
+
   "include": ["app/**/*", "config/**/*", "contracts/**/*", "database/**/*", "start/**/*"],
   "exclude": ["build"]
 }

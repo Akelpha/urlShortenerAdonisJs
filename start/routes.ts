@@ -1,6 +1,6 @@
 import router from '@adonisjs/core/services/router'
+const UrlController = () => import('#controllers/url_controller')
 
-const urlController = () => import('#controllers/url_controller')
+router.on('/').render('home')
 
-router.on('/').render('pages/home')
-router.post('/return', [urlController, 'index'])
+router.post('/return', [UrlController, 'index'])

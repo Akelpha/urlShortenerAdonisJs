@@ -1,7 +1,7 @@
 // import express from 'express';
 // import path from 'path';
 // import { fileURLToPath } from 'url';
-// import { users_controller } from './controllers/users_controller'; 
+// import { users_controller } from './controllers/users_controller';
 
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
@@ -13,7 +13,7 @@
 // app.set('views', path.join(__dirname, '../views'));
 
 // // Configurer le dossier public pour les fichiers statiques (CSS, JS)
-// app.use(express.static(path.join(__dirname, '../resources'))); 
+// app.use(express.static(path.join(__dirname, '../resources')));
 
 // // Page d'accueil : rendre la page avec Edge
 // app.get('/', (_req, res) => {
@@ -21,7 +21,7 @@
 // });
 
 // // Route pour raccourcir l'URL et générer le QR code
-// app.get('/shorten', users_controller.shorten); 
+// app.get('/shorten', users_controller.shorten);
 
 // // Démarrer le serveur
 // app.listen(PORT, () => {
