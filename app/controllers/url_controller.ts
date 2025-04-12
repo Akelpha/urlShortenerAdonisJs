@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 import type { HttpContext } from '@adonisjs/core/http'
 
 export default class UrlController {
-  public async index({ request, view }: HttpContext) {
+  async index({ request, view }: HttpContext) {
     const originalUrl = request.input('url') // Récupère le paramètre 'url'
 
     if (!originalUrl) {
@@ -30,7 +30,7 @@ export default class UrlController {
       })
     }
   }
-  public async about({ view }: HttpContext) {
+  async about({ view }: HttpContext) {
     return view.render('pages/about')
   }
 }

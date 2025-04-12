@@ -7,6 +7,8 @@
     "esModuleInterop": true,
     "moduleResolution": "node16"
   },
+  "noEmit": false,
+  "noEmitOnError": false,
 
   "include": ["app/**/*", "config/**/*", "contracts/**/*", "database/**/*", "start/**/*"],
   "exclude": ["build"]
