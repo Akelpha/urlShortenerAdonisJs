@@ -3,18 +3,21 @@
   <header>
     <nav>
       <a href="/" class="logo">SHURL</a>
-      <ul class="nav-links">
-        <li>
-          <a href="/">Accueil</a>
-        </li>
-        <li>
-          <a href="/about">À propos</a>
-        </li>
-      </ul>
+      <div class="nav-links">
+        <ul>
+          <li>
+            <a href="/">Accueil</a>
+          </li>
+          <li>
+            <a href="/about">À propos</a>
+          </li>
+        </ul>
+      </div>
 
     </nav>
   </header>
-  <main>
+  {{-- Je suis obligé de mettre cette partie en commentaire mais je vais laisser ce code ici car je dois trouver comment l'utiliser avec view.render --}}
+  {{-- <main>
     <div>
       <h1>
         Bienvenue chez URL Shorterner, où vos liens sont raccourcis! (Bonus : un QR code avec)
@@ -36,9 +39,42 @@
         </section>
       </div>
 
-    </main>
-    @component('components/footer')
-    @endcomponent
+  </main> --}}
+  <main>
+    <div>
+      <h1>
+        Bienvenue chez URL Shortener, où vos liens sont raccourcis! (Bonus : un QR code avec)
+      </h1>
+
+      @if(flashMessages.shortUrl && flashMessages.qrCodeUrl)
+        <div class="div-section">
+          <section>
+            <label for="oldLink">Votre Lien Raccourci</label>
+            <p class="url_shortener">
+              Short Url: <a id="shortUrl" target="_blank" href="{{ flashMessages.shortUrl }}" rel="noopener noreferrer">{{ flashMessages.shortUrl }}</a>
+            </p>
+
+            <label for="qrCode">Votre QR Code</label>
+            <div class="qr_codeDiv">
+              <div id="qrCode">
+                <img src="{{ flashMessages.qrCodeUrl }}" alt="QR Code" />
+              </div>
+            </div>
+          </section>
+        </div>
+      @endif
+
+      @if(flashMessages.error)
+        <div class="alert alert-danger">
+          {{ flashMessages.error }}
+        </div>
+      @endif
+
+    </div>
+  </main>
+
+  @component('components/footer')
+  @endcomponent
 
 
-  @end
+@end

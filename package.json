@@ -62,6 +62,7 @@
     "@adonisjs/view": "^6.2.0",
     "@adonisjs/vite": "^4.0.0",
     "@vinejs/vine": "^2.1.0",
+    "edge": "^7.10.1",
     "edge.js": "^6.2.1",
     "express": "^4.21.0",
     "luxon": "^3.5.0",
